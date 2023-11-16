@@ -1,0 +1,52 @@
+<!-- activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="16dp">
+    <ImageView
+        android:id="@+id/albumArt"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/img_2"
+        />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/albumArt"
+    android:layout_marginTop="35dp"
+    >
+
+    <Button
+        android:id="@+id/btnPrevious"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:onClick="onPreviousClick"
+        android:text="Previous"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnPlayPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="onPlayPauseClick"
+        android:text="Play"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintStart_toEndOf="@+id/btnPrevious" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="7dp"
+        android:onClick="onNextClick"
+        android:text="Next"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
